@@ -2,7 +2,26 @@ const router = require("express").Router();
 const { Post, User, Comment } = require("../../models")
 
 
+router.get("/", async (req, res) => {
 
+    try {
+        const postData = await Post.findAll({
+            include: [{ model: User }, { model: Comment }]
+
+        })
+        res.status(200).json(postData)
+    } catch (err) {
+        console.log(err)
+        res.status(500).json(err)
+    }
+
+})
+
+
+// router.get('/', function (req, res, next) {
+//     console.log("Router Working");
+//     res.end();
+// })
 
 
 // router.get('/', (req, res) => {
@@ -37,17 +56,4 @@ const { Post, User, Comment } = require("../../models")
 //   });
 
 
-router.get("/", async (res, req) => {
-
-    try {
-        const postData = await Post.findAll({
-            include: [{ model: User }, { model: Comment }]
-
-        })
-        res.status(200).json(postData)
-    } catch (err) {
-        console.log(err)
-        res.status(500).json(err)
-    }
-
-})
+module.exports = router

@@ -1,13 +1,28 @@
+<img src="/images/pexels-cottonbro-studio-4709285.jpg" alt="" Class = "main-Pic"srcset=""></img>
+<h2 class="Main-Writing">Trending Blogs</h2>
 
-
-<div class="Writing">
-    <h2 class ="Main-Writing">Tech Savvy</h2>
-</div>
 
 <main class="Main-Content">
     <section class="Post-area">
+        <ul class="posts">
+          {{#each projects as |project| }}
+              <li class ="Post-Title" >{{project.title}}</li>
+                 <p class = "user">Posted By:{{project.user.username}}  On: {{format_date project.createdAt}}</p>
 
+        </ul>
+              <p class ="post-Description">{{project.description}}</p>
+              
+
+
+<label for="comment"></label>
+<input type="text" class="comment-section" name="comment" id="comment" placeholder="Write A Comment...">
+
+  <input type ="submit" class ="submit-Comment">
+
+{{/each}}
     </section>
     <aside class ="Comment-Area"></aside>
 </main>
 
+
+{{!-- <script src="/js/index.js"></script> --}}
