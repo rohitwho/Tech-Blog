@@ -1,7 +1,6 @@
 
 
-@import url('https://fonts.googleapis.com/css2?family=Playfair:ital,wght@0,300;0,600;1,300;1,600&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@1,400;1,500&family=Montserrat:wght@200;300&family=Ysabeau+SC:wght@100;200;300;400;500&display=swap');
 /* Box sizing rules */
 *,
 *::before,
@@ -40,7 +39,7 @@ body {
     text-rendering: optimizeSpeed;
     line-height: 1.5;
     scroll-behavior: smooth;
-    font-family: 'Playfair', serif;
+    font-family: 'Ysabeau SC', sans-serif;
     transition: ease-in-out 200ms;
 }
 
@@ -86,6 +85,92 @@ select {
     display: inline-flex;
     justify-content: center;
 } */
+
+/* New Post */
+
+
+
+
+
+
+
+
+
+.Main-Wrapper{
+display: flex;
+justify-content: center;
+align-items: center;
+border:1px solid black;
+}
+
+.Main-post-section{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+border:1px solid black;
+  margin:1%;
+}
+
+.Existing-Post{
+  margin:1%;
+  width:100%;
+  border:1px solid black;
+}
+
+.post-Heading{
+  text-transform: uppercase;
+  border-bottom: inset;
+}
+
+
+.New-Post{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+    margin:1%;
+  width:100%;
+   border:1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
 
 
 .image-container {
@@ -146,7 +231,7 @@ select {
     height: 100%;
   }
   
-  .form {
+  /* .form {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -345,7 +430,7 @@ select {
   
   .form button:hover {
     background-color: #005ce6;
-  }
+  } 
 
 
 
@@ -393,25 +478,35 @@ select {
 
 /*  */
 .Primary-Header {
+  display: flex;
+  align-items: center;
     background-color: #868B8E;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    justify-content: space-between;
+    /* flex-wrap: wrap; */
 }
-.Logo{
-    padding: 1rem;
+
+.Navbar-List>li{
+  list-style: none;
+ 
+ 
 }
 
 .Primary-Nav-Link{
- 
+
      font-size: 1.4rem;
-    padding: 0.2rem;
+    padding: 0.9rem;
     cursor:pointer;
+    color:#242222;
+    text-decoration: none;
+
+
 
     
 }
 .Primary-Nav-Link:hover{
-    box-shadow: inset;
+  border-bottom: inset;
+  scale:1.1;
+  transition: ease-in-out 200ms;
 }
 .Writing{
     display: flex;
@@ -432,30 +527,32 @@ select {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #F2AA4CFF;
-  /* border:2px solid black; */
-   
-    /* justify-content: space-around; */
-    margin:1rem
+    margin:1%;
+    /* background-color: rgb(109, 154, 232); */
+
+  
 }
 
 .Post-area{
-       border-bottom: inset; 
-
-    /* border:2px solid black; */
+ 
+       /* border-bottom: inset;  */
+margin:1%;
+    border:inset;
     /* height:100vh; */
-   /* width:50%; */
+   width:50%;
 }
-.Comment{
-    padding:1rem
 
-}
 .comment-section{
     border-radius: 10px 5px 50px 5px;
     height:5rem;
     width:50%;
+    margin-bottom: 1%;
 
-    /* border-bottom: inset; */
+   
+}
+.comment-here{
+ border-bottom: inset;
+ margin: 1%;
 }
 
 .user{
@@ -463,8 +560,8 @@ select {
 }
 .Post-Title{
    
-    font-size: 1.6rem;
-    font-weight: 1,600;
+    font-size: 1.9rem;
+    font-weight: 500;
 
     /* border:1px solid black; */
 }
@@ -474,10 +571,10 @@ select {
     font-size: 1.2rem;
     font-weight: 1,300;
 }
-.Primary-Footer{
-    background-color: #868B8E;
-}
+
 .logo-Pic{
   aspect-ratio: 1;
-  width:3rem;
+  width:3.3rem;
+  margin:0.9rem;
+  border-radius: 50%;
 }

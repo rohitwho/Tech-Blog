@@ -1,0 +1,35 @@
+<main class = "Main-Wrapper"> 
+    <section class="Main-post-section">
+        <div class="Existing-Post">
+    {{#if getPost}}
+            <h1 class = "post-Heading"> Posts  by {{username}}</h1>
+{{#each getPost}}
+            <h2 class = "title-class" data-id ="{{id}}">title:{{title}}</h2>
+            <h3>Description:{{description}}</h3>
+            <button id = "updateComment">update</button>
+            <button id = "delUserPost">delete</button>
+    
+    {{/each}}
+
+   
+    {{else}}
+    <h1 class = "post-Heading">User have no posts</h1>
+     {{/if}}
+    
+        </div>
+    
+    
+    
+        {{!-- --}}
+        <div class="New-Post">
+            <label for="userTitle">Title:</label>
+            <input type="text" name="title" id="userTitle">
+            <label for="userDescription">Description:</label>
+            <input type="text" name="description" id="userDescription">
+            <button id="submitId" class="submit-btn">Post</button>
+    
+    
+        </div>
+    </section>
+</main>
+<script src="/js/post.js"></script>

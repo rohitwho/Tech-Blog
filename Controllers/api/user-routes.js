@@ -11,6 +11,8 @@ const userData = await User.create({
       password: req.body.password,
 })
 req.session.save(() => {
+  req.session.username = userData.username
+  req.session.user_id = userData.id
     req.session.loggedIn = true;
 
     res.status(200).json(userData);
@@ -47,6 +49,8 @@ if (!dbUserData) {
   // Once the user successfully logs in, set up the sessions variable 'loggedIn'
   req.session.save(() => {
     req.session.loggedIn = true;
+    req.session.username = dbUserData.username
+    req.session.user_id = dbUserData.id
 
     res
       .status(200)

@@ -1,40 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="/Css/styles.css">
     <title>Tech Savvy</title>
 </head>
+
 <body>
     <header class="Primary-Header">
-    {{!-- <h1 class="Logo">T S</h1> --}}
-    <img src="/images/2023-06-11.png" class = "logo-Pic"alt="" srcset="">
-    <nav class="Primary-Nav">
-        <ul class ="Navbar-List">
-     <link href="https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic" rel="stylesheet" />
-           <a href="/" class="Primary-Nav-Link">Dashboard</a>
-             <a href="/login" class="Primary-Nav-Link">LogIn</a>
-             
-        </ul>
-    </nav>
-</header>
+        <img src="/images/2023-06-11.png" class="logo-Pic" alt="" srcset="">
+        <nav class="Primary-Nav">
+            <ul class="Navbar-List">
 
-{{!-- <div class="Writing">
-    <h2 class ="Main-Writing">Tech Savvy</h2>
-</div> --}}
+               <a href="/" class="Primary-Nav-Link">Home</a> 
+               
+               <a href="/newPost" class="Primary-Nav-Link">Dashboard</a>
+                {{#if loggedIn}}
+               <a href="/logout"  id = "logout" class="Primary-Nav-Link">Logout</a>
+          
+               {{else}}
+               <a href="/login" class="Primary-Nav-Link">LogIn</a>
+                  {{/if}}
+                
 
-
-
-
-
-
-
-
-
-
-
-     {{{body}}}
+            </ul>
+        </nav>
+    </header>
 
 
 
@@ -43,10 +36,19 @@
 
 
 
-     <footer class="Primary-Footer">
-    <ul class="Footer-List">
-        <a href="" class="Primary-Footer-Link">Contact us</a>
-    </ul>
-</footer>
+
+
+
+
+    {{{body}}}
+
+
+
+
+
+
+
+
 </body>
+
 </html>
