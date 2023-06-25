@@ -56,3 +56,20 @@ document.getElementById("newLog").addEventListener("click",logIn)
 
 
 
+const activeSignUp = document.getElementById("signUpButton")
+
+activeSignUp.addEventListener("click",viewSignUp)
+ const SignUp = document.querySelector(".form-box")
+
+function viewSignUp(e){
+  e.preventDefault()
+  const signUp = document.querySelector(".form-box")
+  signUp.style.display="block "
+  hideLog()
+}
+function hideLog(){
+  
+  const login = document.querySelector(".container-log")
+
+  login.style.display="none"
+}

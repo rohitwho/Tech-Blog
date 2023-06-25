@@ -12,4 +12,4 @@ const logout = async () => {
   };
   
   document.getElementById('logout').addEventListener('click', logout);
-  console.log("logout")
+ 

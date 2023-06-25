@@ -1,38 +1,92 @@
-<img src="/images/pexels-cottonbro-studio-4709285.jpg" alt="" Class = "main-Pic"srcset=""></img>
-<h2 class="Main-Writing">Trending Blogs</h2>
 
 
-<main class="Main-Content">
+
+
+
+
+
+
+
+
+{{#if postSerial}}
+
+
+
+            <section class = "Id-Section">
+                <main>
+                    <h1>{{postSerial.title}}</h1>
+                    <p data-id="{{postSerial.id}}" class="user">Posted By:{{postSerial.user.username}} On: </p>
+                    <p class="post-Description">{{postSerial.description}}</p>
+                </main>
+                {{#if commentData}}
+                <div>
+                    <p>comments by users</p>
+                    {{#each commentData}}
+                    <ul>
+                        <li>{{comment_text}} <span>By: {{user.username}}</span></li>
+                        <span><button class = "comment-del" >Del</button></span>
+                    </ul>
+                    
+                    {{/each}}
+                    {{/if}}
+                    <div class="comment-here">
+                        <label for="comment">Comment:</label>
+                        <input type="text" class="comment-section" name="comment" id="comment" placeholder="Write A Comment...">
+                        <button id="postComment" class="submit-Comment">Send </button>
+                </div>
+                </div>
+            </section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            {{else}}
+            <img src="/images/pexels-cottonbro-studio-4709285.jpg" alt="" Class="main-Pic" srcset=""></img>
+            <h2 class="Main-Writing">Trending Blogs</h2>
+            <main class="Main-Content">
     <section class="Post-area">
         <ul class="posts">
-          {{#each projects}}
-              <li class ="Post-Title"  >{{title}}</li>
-                 <p  data-id = "{{id}}" class = "user">Posted By:{{user.username}}  On: {{format_date createdAt}}</p>
+
+            {{#each projects}}
+            <a href="/post/{{id}}" class="Post-Title">{{title}}</a>
+            <p data-id="{{id}}">Posted By:{{user.username}} On: {{format_date createdAt}}</p>
 
         </ul>
-              <p class ="post-Description">{{description}}</p>
-              {{#if comment}}
-              <p>comments by users</p>
-              {{#each comment}}
-              <li>{{comment_text}}</li>
-              {{/each}}
-              {{/if}}
-              
+        <p class="post-Description">{{description}}</p>
 
 
-<div class = "comment-here">
-    <label for="comment">Comment:</label>
-    <input type="text" class="comment-section" name="comment" id="comment" placeholder="Write A Comment...">
-    
-    <button  id = "postComment" class ="submit-Comment">Send </button>
-</div>
 
 
-{{/each}}
+
+        {{/each}}
+        {{/if}}
     </section>
-    <aside class ="Comment-Area"></aside>
+    <aside class="Comment-Area"></aside>
 </main>
 
 <script src="/js/logout.js"></script>
 <script src="/js/comment.js"></script>
-{{!-- <script src="/js/index.js"></script> --}}
+{{!--
+<script src="/js/index.js"></script> --}}

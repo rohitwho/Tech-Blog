@@ -4,10 +4,17 @@
     {{#if getPost}}
             <h1 class = "post-Heading"> Posts  by {{username}}</h1>
 {{#each getPost}}
-            <h2 class = "title-class" data-id ="{{id}}">title:{{title}}</h2>
-            <h3>Description:{{description}}</h3>
-            <button id = "updateComment">update</button>
-            <button id = "delUserPost">delete</button>
+            <h2 class = "title-class" data-id ="{{id}}">title:<span class ="span-title">{{title}}</span></h2>
+            <h3>Description:<span class ="span-title">{{description}}</span></h3>
+            <button class = "updatePost">edit</button>
+            <button class = "delUserPost">delete</button>
+            <dialog >
+   <label for="userTitle">Title:</label>
+                <input type="text" name="title" id="newTitle">
+                <label for="userDescription">Description:</label>
+                <input type="text" name="description" id="newDescription">
+                <button id="newSubmitId" class="submit-btn">Post</button>
+</dialog>
     
     {{/each}}
 
@@ -22,11 +29,13 @@
     
         {{!-- --}}
         <div class="New-Post">
-            <label for="userTitle">Title:</label>
-            <input type="text" name="title" id="userTitle">
-            <label for="userDescription">Description:</label>
-            <input type="text" name="description" id="userDescription">
-            <button id="submitId" class="submit-btn">Post</button>
+           
+                <label for="userTitle">Title:</label>
+                <input type="text" name="title" id="userTitle">
+                <label for="userDescription">Description:</label>
+                <input type="text" name="description" id="userDescription">
+                <button id="submitId" class="submit-btn">Post</button>
+     
     
     
         </div>

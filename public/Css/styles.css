@@ -88,9 +88,60 @@ select {
 
 /* New Post */
 
+/*  */
+.Id-Section{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*  */
 
 
 
@@ -100,18 +151,21 @@ select {
 display: flex;
 justify-content: center;
 align-items: center;
-border:1px solid black;
+/* border:1px solid black; */
 }
 
 .Main-post-section{
   display: flex;
-  justify-content: space-around;
+  justify-content: space-evenly;
   align-items: center;
-border:1px solid black;
+
+width:80%;
   margin:1%;
 }
 
 .Existing-Post{
+  /* display: flex; */
+  text-align: center;
   margin:1%;
   width:100%;
   border:1px solid black;
@@ -121,17 +175,23 @@ border:1px solid black;
   text-transform: uppercase;
   border-bottom: inset;
 }
-
+.span-title{
+  font-weight: 300;
+}
 
 .New-Post{
+  position: sticky;
   display: flex;
   flex-direction: column;
   justify-content: center;
     margin:1%;
   width:100%;
-   border:1px solid black;
+   /* border:1px solid black; */
 }
 
+.New-Post > label{
+  font-weight: 500;
+}
 
 
 
@@ -211,7 +271,7 @@ border:1px solid black;
     /* align-items: center; */
     /* background-color: #868B8E; */
 }
-.container {
+.container-log {
     display: flex;
     width: 50%;
     height: 100vh;
@@ -231,9 +291,10 @@ border:1px solid black;
     height: 100%;
   }
   
-  /* .form {
+  .log-form {
     display: flex;
     flex-direction: column;
+    /* align-items: center; */
     justify-content: center;
     height: 100%;
     width: 100%;
@@ -242,7 +303,7 @@ border:1px solid black;
     position: relative;
   }
   
-  .form::before {
+  .log-form::before {
     position: absolute;
     content: "";
     width: 40%;
@@ -270,7 +331,7 @@ border:1px solid black;
     height: 100%;
   }
   
-  .container::after {
+  .container-log:after {
     position: absolute;
     content: "";
     width: 80%;
@@ -286,8 +347,8 @@ border:1px solid black;
     z-index: -1;
   }
   
-  .input,
-  button {
+  .input-log,button
+  {
     background: rgba(253, 253, 253, 0);
     outline: none;
     border: 1px solid rgba(255, 0, 0, 0);
@@ -305,7 +366,7 @@ border:1px solid black;
     position: relative;
   }
   
-  label {
+  .label-log {
     position: absolute;
     left: 15%;
     top: 37%;
@@ -321,33 +382,47 @@ border:1px solid black;
     font-size: 0.9em;
   }
   
-  .input:focus + label,
-  .input:valid + label {
+  .input-log:focus + label,
+  .input-log:valid + label {
     transform: translateY(-120%) scale(0.9);
     transition: all 0.4s;
   }
   
-  button {
+  #newLog,button {
     background-color: #5e7eb6;
     color: white;
     font-size: medium;
+    cursor: pointer;
     box-shadow: 2px 4px 8px rgba(70, 70, 70, 0.178);
   }
   
   a {
     color: #5e7eb6;
+    cursor: pointer;
   }
   
-  .input {
+  .title {
+    margin-left: 6%;
+    font-weight: bold;
+    font-size: 1.6rem;
+  }
+  
+  .subtitle {
+    margin-left: 6%;
+    font-size: 1rem;
+    color: #666;
+  }
+  .input-log {
     box-shadow: inset 4px 4px 4px rgba(165, 163, 163, 0.315),
       4px 4px 4px rgba(218, 218, 218, 0.13);
   }
   
 
-/*  */
+
 
 
 .form-box {
+  display: none;
     width: 30%;
     height:100vh;
     background: #f1f7fe;
@@ -367,15 +442,6 @@ border:1px solid black;
   }
   
   /*Form text*/
-  .title {
-    font-weight: bold;
-    font-size: 1.6rem;
-  }
-  
-  .subtitle {
-    font-size: 1rem;
-    color: #666;
-  }
   
   /*Inputs box*/
   .form-container {
@@ -527,6 +593,7 @@ border:1px solid black;
     display: flex;
     justify-content: center;
     align-items: center;
+  
     margin:1%;
     /* background-color: rgb(109, 154, 232); */
 
@@ -534,12 +601,18 @@ border:1px solid black;
 }
 
 .Post-area{
- 
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  flex-direction: column; */
+  text-align: center;
        /* border-bottom: inset;  */
 margin:1%;
-    border:inset;
+padding:2%;
+    /* border:inset; */
     /* height:100vh; */
-   width:50%;
+   width:80%;
 }
 
 .comment-section{
@@ -560,16 +633,20 @@ margin:1%;
 }
 .Post-Title{
    
-    font-size: 1.9rem;
-    font-weight: 500;
-
+    font-size: 2.9rem;
+    font-weight: 600;
+border-bottom:inset;
+/* color: #010101; */
     /* border:1px solid black; */
+}
+.Post-Title:hover{
+  color: #1f1f1f;
 }
 .post-Description{
     border-top: inset;
     padding:0.8rem;
-    font-size: 1.2rem;
-    font-weight: 1,300;
+    font-size: 1.7rem;
+    font-weight: 400;
 }
 
 .logo-Pic{
