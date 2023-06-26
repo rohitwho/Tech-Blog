@@ -1,41 +1,39 @@
-
-
-
-
-
-
-
-
-
-
 {{#if postSerial}}
 
 
 
-            <section class = "Id-Section">
-                <main>
-                    <h1>{{postSerial.title}}</h1>
-                    <p data-id="{{postSerial.id}}" class="user">Posted By:{{postSerial.user.username}} On: </p>
-                    <p class="post-Description">{{postSerial.description}}</p>
-                </main>
-                {{#if commentData}}
-                <div>
-                    <p>comments by users</p>
-                    {{#each commentData}}
-                    <ul>
-                        <li>{{comment_text}} <span>By: {{user.username}}</span></li>
-                        <span><button class = "comment-del" >Del</button></span>
-                    </ul>
-                    
-                    {{/each}}
-                    {{/if}}
-                    <div class="comment-here">
-                        <label for="comment">Comment:</label>
-                        <input type="text" class="comment-section" name="comment" id="comment" placeholder="Write A Comment...">
-                        <button id="postComment" class="submit-Comment">Send </button>
-                </div>
-                </div>
-            </section>
+<section class="Id-Section">
+    <main class="Id-Main">
+        <h1 class ="id-title">{{postSerial.title}}</h1>
+        <p data-id="{{postSerial.id}}" class="user">Posted By:{{postSerial.user.username}} On: </p>
+        <p class="post-Description-id">{{postSerial.description}}</p>
+    </main>
+    {{#if commentData}}
+    <div class="Comment-div">
+        <p class="user">comments by users</p>
+        {{#each commentData}}
+        <div class = "comment-div-ul">
+            <ul>
+               
+                <li class="cmnt-list">
+                    <span class="userProfile">On:{{format_date createdAt}} By:{{user.username}} &#10139;  {{comment_text}}</span>
+                    {{!-- //Added functionality to del a comment --}}
+                    {{!-- <span class="comment-del"><button class = "btn-del">delete</button></span> --}}
+                </li>
+                
+            </ul>
+
+        </div>
+
+        {{/each}}
+        {{/if}}
+        <div class="comment-here">
+            <label for="comment">Comment:</label>
+            <input type="text" class="comment-section" name="comment" id="comment" placeholder="Write A Comment...">
+            <button id="postComment" class="submit-Comment">Send </button>
+        </div>
+    </div>
+</section>
 
 
 
@@ -62,10 +60,10 @@
 
 
 
-            {{else}}
-            <img src="/images/pexels-cottonbro-studio-4709285.jpg" alt="" Class="main-Pic" srcset=""></img>
-            <h2 class="Main-Writing">Trending Blogs</h2>
-            <main class="Main-Content">
+{{else}}
+<img src="/images/pexels-cottonbro-studio-4709285.jpg" alt="" Class="main-Pic" srcset=""></img>
+<h2 class="Main-Writing">Trending Blogs</h2>
+<main class="Main-Content">
     <section class="Post-area">
         <ul class="posts">
 
@@ -74,7 +72,9 @@
             <p data-id="{{id}}">Posted By:{{user.username}} On: {{format_date createdAt}}</p>
 
         </ul>
-        <p class="post-Description">{{description}}</p>
+        <div class="wrap-des">
+            <p class="post-Description">{{description}}</p>
+        </div>
 
 
 

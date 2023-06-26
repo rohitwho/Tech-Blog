@@ -2,20 +2,6 @@ const router = require("express").Router();
 const { Post, User, Comment } = require("../../models")
 
 
-// router.get("/", async (req, res) => {
-
-//     try {
-//         const postData = await Post.findAll({
-//             include: [{ model: User }, { model: Comment }]
-
-//         })
-//         res.status(200).json(postData)
-//     } catch (err) {
-//         console.log(err)
-//         res.status(500).json(err)
-//     }
-
-// })
 
 
 
@@ -35,24 +21,25 @@ res.status(200).json(comment)
 
 
 })
-
-router.delete('/comment/:id', async (req, res) => {
-    try {
-      const deleteComment = await Comment.destroy({
-        where: {
-          id: req.params.id
-        }
-      });
+//Added functionality to del a comment
+// router.delete('/comment/:id', async (req, res) => {
+//     try {
+//       const deleteComment = await Comment.destroy({
+//         where: {
+//           id: req.params.id,
+//         },
+        
+//       });
   
-      if (deleteComment === 0) {
-        return res.status(404).json({ error: 'Comment not found' });
-      }
+//       if (deleteComment === 0) {
+//         return res.status(404).json({ error: 'Comment not found' });
+//       }
   
-      res.status(200).json({ message: 'Comment deleted successfully' });
-    } catch (err) {
-      res.status(400).json(err);
-    }
-  });
+//       res.status(200).json({ message: 'Comment deleted successfully' });
+//     } catch (err) {
+//       res.status(400).json(err);
+//     }
+//   });
 
 
 

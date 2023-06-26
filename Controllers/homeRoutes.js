@@ -54,7 +54,7 @@ const comment = await Comment.findAll({
   }
 })
 const commentData = comment.map((cmnt)=>cmnt.get({plain:true}))
-console.log(commentData)
+
 
 
 

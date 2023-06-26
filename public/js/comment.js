@@ -4,7 +4,7 @@ const postComment = async (e) => {
   const comment = document.getElementById("comment").value.trim()
   const element = document.querySelector('.user');
   const postId = element.getAttribute('data-id');
-  console.log(postId)
+
 
   let data = {
     comment_text: comment,
@@ -33,35 +33,36 @@ const postComment = async (e) => {
 document.querySelector(".submit-Comment").addEventListener("click", postComment)
 
 
+//Added functionality to del a comment
 
+// const delcmnt = async (e) => {
+//   e.preventDefault()
 
-const delcmnt = async (e) => {
-  e.preventDefault()
-
-  const element = document.querySelector('.user');
-  const id = element.getAttribute('data-id');
-  console.log(id)
-
-
-  const response = await fetch(`/api/posts/comment/${id}`, {
-
-    method: 'DELETE',
-  })
-
-  if (response.ok) {
-    location.reload()
-  }
-
-
-}
+//   const element = document.querySelector('.user');
+//   const id = element.getAttribute('data-id');
+ 
 
 
 
-const comment = document.querySelectorAll(".comment-del");
+//   const response = await fetch(`/api/posts/comment/${id}`, {
 
-comment.forEach(button => {
-  button.addEventListener("click", delcmnt)
-})
+//     method: 'DELETE',
+//   })
+
+//   if (response.ok) {
+//     location.reload()
+//   }
+
+
+// }
+
+
+
+// const comment = document.querySelectorAll(".comment-del");
+
+// comment.forEach(button => {
+//   button.addEventListener("click", delcmnt)
+// })
 
 
 
