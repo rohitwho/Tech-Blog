@@ -42,7 +42,7 @@ To start the server, run the following command:
 `node  .\seeds\seed.js`
 
 `npx nodemon server.js`
-The server will start running on http://localhost:3001.
+
 
 .
 
