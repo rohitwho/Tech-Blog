@@ -5,7 +5,7 @@
 <section class="Id-Section">
     <main class="Id-Main">
         <h1 class ="id-title">{{postSerial.title}}</h1>
-        <p data-id="{{postSerial.id}}" class="user">Posted By:{{postSerial.user.username}} On: </p>
+        <p data-id="{{postSerial.id}}" class="user">Posted By:{{postSerial.user.username}} On:{{format_date postSerial.createdAt}} </p>
         <p class="post-Description-id">{{postSerial.description}}</p>
     </main>
     {{#if commentData}}
@@ -34,24 +34,6 @@
         </div>
     </div>
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
