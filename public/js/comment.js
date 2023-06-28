@@ -35,38 +35,36 @@ document.querySelector(".submit-Comment").addEventListener("click", postComment)
 
 //Added functionality to del a comment
 
-// const delcmnt = async (e) => {
-//   e.preventDefault()
+const delcmnt = async (e) => {
+  e.preventDefault();
 
-//   const element = document.querySelector('.user');
-//   const id = element.getAttribute('data-id');
- 
-
+  const element = document.querySelector('.userProfile');
+  const id = element.getAttribute('data-id');
 
 
-//   const response = await fetch(`/api/posts/comment/${id}`, {
+  try {
+    const response = await fetch(`/api/posts/comment/${id}`, {
+      method: 'DELETE',
+    });
 
-//     method: 'DELETE',
-//   })
-
-//   if (response.ok) {
-//     location.reload()
-//   }
-
-
-// }
-
-
-
-// const comment = document.querySelectorAll(".comment-del");
-
-// comment.forEach(button => {
-//   button.addEventListener("click", delcmnt)
-// })
+    if (response.ok) {
+      location.reload();
+    } else {
+      console.error('Failed to delete comment');
+    }
+  } catch (error) {
+    console.error('An error occurred while deleting the comment', error);
+  }
+};
 
 
 
 
+const comment = document.querySelectorAll(".comment-del");
+
+comment.forEach(button => {
+  button.addEventListener("click", delcmnt)
+})
 
 
 
@@ -74,4 +72,7 @@ document.querySelector(".submit-Comment").addEventListener("click", postComment)
 
 
 
-console.log("hello world  ")
+
+
+
+

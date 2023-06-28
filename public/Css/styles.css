@@ -585,7 +585,7 @@ color: #EBEBD3;
   margin:0.9rem;
   border-radius: 50%;
 }
-/* .cmnt-list:hover> .comment-del{
+.cmnt-list:hover> .comment-del{
   display: block;
 }
 .comment-del{
@@ -593,7 +593,7 @@ color: #EBEBD3;
  
   width:5rem;
   cursor:pointer;
-} */
+}
 
 .Id-Main{
   margin:2%;

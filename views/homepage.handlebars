@@ -16,9 +16,9 @@
             <ul>
                
                 <li class="cmnt-list">
-                    <span class="userProfile">On:{{format_date createdAt}} By:{{user.username}} &#10139;  {{comment_text}}</span>
+                    <span data-id = {{id}} class="userProfile">On:{{format_date createdAt}} By:{{user.username}} &#10139;  {{comment_text}}</span>
                     {{!-- //Added functionality to del a comment --}}
-                    {{!-- <span class="comment-del"><button class = "btn-del">delete</button></span> --}}
+                    <span class="comment-del"><button class = "btn-del">delete</button></span>
                 </li>
                 
             </ul>
