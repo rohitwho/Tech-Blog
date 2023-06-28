@@ -28,10 +28,12 @@ Signed-in users can access the dashboard, which shows their existing blog posts 
 Within the dashboard, users can delete or update their existing posts. Clicking on the logout option in the navigation signs the user out. If the user is idle on the site for a specified duration, they can still view comments but are prompted to log in again before adding, updating, or deleting comments.
 
 ## Screenshot
-![Screenshot 2023-06-25 221028](https://github.com/rohitwho/Tech-savvy/assets/123782523/6a75ba97-4813-4eae-8648-7a9d344998fe)
+
+![Screenshot 2023-06-25 222430](https://github.com/rohitwho/Tech-savvy/assets/123782523/1029c146-d8b0-4a05-bd7b-3e5477541d44)
+
+![Screenshot 2023-06-25 222443](https://github.com/rohitwho/Tech-savvy/assets/123782523/707dae0a-b69d-4a4c-866a-4ff89f9c15fd)
 
 
-![Screenshot 2023-06-25 221008](https://github.com/rohitwho/Tech-savvy/assets/123782523/2264e28b-a21f-48e0-abfc-86d082f89eea)
 
 ## Installation
 To set up the project on your local machine, follow these steps:
