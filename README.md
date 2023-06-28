@@ -15,6 +15,9 @@
 - [License](#license)
 - [Questions](#questions)
 
+  ## Deployed Link
+  https://tech-savvy-d98bc01a66cd.herokuapp.com/
+
 
 ## Description
 The given CMS-style blog site provides various functionalities and user interactions. When visiting the site for the first time, the homepage displays existing blog posts, if any, along with navigation links to the homepage and dashboard, and the option to log in. Clicking on the homepage link takes the user to the homepage, while clicking on other navigation links prompts the user to sign up or sign in.
